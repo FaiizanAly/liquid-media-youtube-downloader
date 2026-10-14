@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Liquid Media",
+  "version": "1.0.0",
+  "description": "Minimalist macOS-inspired media download manager for permitted YouTube and direct media streams.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Liquid Media"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:48123/*",
+    "http://localhost:48123/*",
+    "*://*.youtube.com/*"
+  ]
+}

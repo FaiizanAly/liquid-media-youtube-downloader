@@ -1,0 +1,17 @@
+{
+  "name": "liquid-media-companion",
+  "version": "1.0.0",
+  "description": "Local companion service for Liquid Media Chrome extension",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ../tests/companion.test.js"
+  },
+  "keywords": [
+    "liquid-media",
+    "chrome-extension",
+    "companion"
+  ],
+  "author": "Liquid Media Team",
+  "license": "MIT"
+}

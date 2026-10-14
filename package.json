@@ -1,0 +1,20 @@
+{
+  "name": "liquid-media",
+  "version": "1.0.0",
+  "description": "Minimalist macOS-inspired media download manager for permitted YouTube and direct media streams.",
+  "main": "background.js",
+  "scripts": {
+    "start": "node companion/server.js",
+    "companion": "node companion/server.js",
+    "test": "node tests/run_tests.js",
+    "generate-icons": "node icons/generate_icons.js"
+  },
+  "keywords": [
+    "chrome-extension",
+    "media-downloader",
+    "liquid-glass",
+    "manifest-v3"
+  ],
+  "author": "Liquid Media Team",
+  "license": "MIT"
+}
